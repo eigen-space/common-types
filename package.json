@@ -1,0 +1,35 @@
+{
+    "name": "@types/common",
+    "version": "0.0.1",
+    "private": false,
+    "scripts": {
+        "bundle-dts": "node node_modules/@eigenspace/helper-scripts/scripts/project/bundle-dts.js",
+        "build": "webpack --config webpack.config.package.js --progress && yarn bundle-dts",
+        "lint": "tslint --project tsconfig.json",
+        "script:update-deps-local": "node node_modules/@eigenspace/helper-scripts/scripts/project/update-deps.js",
+        "script:update-deps-remote": "npx -p @eigenspace/helper-scripts update-deps"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn hooks:pre-commit"
+        }
+    },
+    "devDependencies": {
+        "@eigenspace/codestyle": "latest",
+        "@eigenspace/helper-scripts": "1.0.54",
+        "clean-webpack-plugin": "1.0.1",
+        "copy-webpack-plugin": "4.6.0",
+        "tslint": "5.12.1",
+        "ts-loader": "5.3.3",
+        "typescript": "3.3.3",
+        "webpack": "4.29.3",
+        "webpack-cli": "3.2.3"
+    },
+    "main": "package-api.js",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eigen-space/common-types.git"
+    },
+    "license": "MIT"
+}

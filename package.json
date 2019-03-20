@@ -1,6 +1,6 @@
 {
-    "name": "@types/common",
-    "version": "0.0.1",
+    "name": "@eigenspace/common-types",
+    "version": "0.0.2",
     "private": false,
     "scripts": {
         "bundle-dts": "node node_modules/@eigenspace/helper-scripts/scripts/project/bundle-dts.js",
@@ -19,8 +19,8 @@
         "@eigenspace/helper-scripts": "1.0.54",
         "clean-webpack-plugin": "1.0.1",
         "copy-webpack-plugin": "4.6.0",
-        "tslint": "5.12.1",
         "ts-loader": "5.3.3",
+        "tslint": "5.12.1",
         "typescript": "3.3.3",
         "webpack": "4.29.3",
         "webpack-cli": "3.2.3"

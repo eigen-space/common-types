@@ -6,6 +6,6 @@
         "outDir": "dist/types"
     },
     "include": [
-        "src/types"
+        "src"
     ]
 }

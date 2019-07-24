@@ -1,7 +1,7 @@
 export {};
 
 declare module '*.json' {
-    // tslint:disable-next-line:no-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const value: any;
     export default value;
 }

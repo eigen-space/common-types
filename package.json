@@ -1,6 +1,6 @@
 {
     "name": "@eigenspace/common-types",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "private": false,
     "scripts": {
         "bundle-dts": "node node_modules/@eigenspace/helper-scripts/scripts/project/bundle-dts.js",

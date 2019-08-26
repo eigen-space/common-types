@@ -11,7 +11,11 @@ script:
   - git checkout $TRAVIS_BRANCH
   - yarn
   - git remote set-url origin https://derlagg:$GITHUB_API_KEY@github.com/eigen-space/common-types.git
-  - yarn lint && yarn build && npm run deploy:publish;
+  # We have this check because of bug in `if: branch = master` or incorrect `$TRAVIS_BRANCH` variable
+  - chmod +x ./node_modules/@eigenspace/helper-scripts/scripts/ci/detect-autocommit.sh
+  - if ./node_modules/@eigenspace/helper-scripts/scripts/ci/detect-autocommit.sh ; then
+    yarn lint && yarn build && npm run deploy:publish;
+    fi
 before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_ACCESS_TOKEN}" > .npmrc
 notifications:

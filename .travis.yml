@@ -22,5 +22,5 @@ notifications:
   slack:
     rooms:
       - eigenspaceworkspace:kmQErenC9R4KA4kWyb1j8UaS#ci
-    on_success: always
+    on_success: change
     on_failure: always

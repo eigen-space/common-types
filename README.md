@@ -36,3 +36,16 @@ See `webpack.config.js`.
 * `husky` - used for configure git hooks.
 * `lint-staged` - used for configure linters against staged git files.
 * `webpack-cli` - command line interface dor webpack.
+
+# CI
+
+**Important!**
+
+Snapshot versions of packages are stored at https://artifacts.arrival.services/
+ Therefore, in order to use them, you need to add registry information to .yarnrc:
+ 
+ ```markdown
+    registry "https://artifacts.arrival.services/"
+ ```
+ 
+Master versions of the packages are stored in the npm registry

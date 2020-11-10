@@ -1,16 +1,16 @@
 {
     "name": "@eigenspace/common-types",
-    "version": "0.0.21",
+    "version": "0.0.22",
     "private": false,
     "scripts": {
-        "bundle-dts": "node node_modules/@eigenspace/helper-scripts/scripts/project/bundle-dts.js",
+        "bundle-dts": "node node_modules/@eigenspace/helper-scripts/scripts/project/bundle-dts",
         "build": "webpack --config webpack.config.package.js --progress && yarn bundle-dts",
         "lint:code": "eslint --ext .js,.jsx,.ts,.tsx",
         "lint:fix": "yarn lint:code --fix",
         "lint:markdown": "node ./node_modules/@eigenspace/codestyle/scripts/markdown-lint.js",
         "lint": "yarn lint:code . && yarn lint:markdown",
-        "deploy:publish": "node node_modules/@eigenspace/helper-scripts/scripts/ci/publish.js",
-        "script:update-deps-local": "node node_modules/@eigenspace/helper-scripts/scripts/project/update-deps.js",
+        "deploy:publish": "node node_modules/@eigenspace/helper-scripts/scripts/ci/publish",
+        "script:update-deps-local": "node node_modules/@eigenspace/helper-scripts/scripts/project/update-deps",
         "script:update-deps-remote": "npx -p @eigenspace/helper-scripts update-deps"
     },
     "husky": {
@@ -26,7 +26,7 @@
     },
     "devDependencies": {
         "@eigenspace/codestyle": "latest",
-        "@eigenspace/helper-scripts": "1.0.61",
+        "@eigenspace/helper-scripts": "3.0.2",
         "clean-webpack-plugin": "1.0.1",
         "copy-webpack-plugin": "4.6.0",
         "eslint": "5.16.0",
